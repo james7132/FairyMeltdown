@@ -5,6 +5,7 @@ using UnityEngine;
 public class MirrorSpriteMovement : MonoBehaviour {
 
   public SpriteRenderer[] Renderers;
+  public bool Inverse;
 
   bool facing;
   Vector3 oldPosition;
@@ -23,9 +24,9 @@ public class MirrorSpriteMovement : MonoBehaviour {
   void LateUpdate() {
     var diff = transform.position - oldPosition;
     if (diff.x > 0) {
-      facing = true;
+      facing = Inverse ? true : false;
     } else if (diff.x < 0) {
-      facing = false;
+      facing = Inverse ? false : true;
     }
     foreach (var renderer in Renderers) {
       renderer.flipX = facing;

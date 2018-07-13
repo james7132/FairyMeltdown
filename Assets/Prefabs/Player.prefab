@@ -103,6 +103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Renderers:
   - {fileID: 212920194309048042}
+  Inverse: 1
 --- !u!114 &114438655080378782
 MonoBehaviour:
   m_ObjectHideFlags: 1
