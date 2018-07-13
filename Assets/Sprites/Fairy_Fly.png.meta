@@ -1,9 +1,11 @@
 fileFormatVersion: 2
-guid: 691c472735f1a904ba0448becf94b9b7
+guid: 970c1f9b385dc4449a5ef2d56a529dac
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Okuu_0
-    21300002: Okuu_1
+    21300000: Fairy_Fly_0
+    21300002: Fairy_Fly_1
+    21300004: Fairy_Fly_2
+    21300006: Fairy_Fly_3
   externalObjects: {}
   serializedVersion: 5
   mipmaps:
@@ -84,41 +86,81 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Okuu_0
+      name: Fairy_Fly_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 40
-        height: 71
+        width: 37
+        height: 37
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ae2a60aa19544a14099b4bbc96dbec6b
+      spriteID: 225e138f6d7ea2c4ca7b3a0b729f81a9
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Okuu_1
+      name: Fairy_Fly_1
       rect:
         serializedVersion: 2
-        x: 40
+        x: 38
         y: 0
-        width: 42
-        height: 71
+        width: 37
+        height: 37
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 24ce3a31e7dc815469bbee958bb5519c
+      spriteID: dbc3c92f75706b34ab6c6e7195f54f60
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fairy_Fly_2
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 0
+        width: 37
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22f6b328947ddf94c915e9735ea82c6c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fairy_Fly_3
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 0
+        width: 36
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77bf9ed494965f94fb6918640a821d6c
       vertices: []
       indices: 
       edges: []
@@ -126,7 +168,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 1dbb5995c401cc648908fc42971fcc86
+    spriteID: 116a204531dd3b249a561880ae673fac
     vertices: []
     indices: 
     edges: []

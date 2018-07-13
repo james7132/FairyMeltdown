@@ -21,7 +21,10 @@ public class Reactor : MonoBehaviour {
       damage = enemy.DamageDealt;
     }
     ReactorHealth -= damage;
-    Debug.Log(ReactorHealth);
+    if (ReactorHealth <= 0) {
+      Debug.Log("Game over!");
+      Debug.Break();
+    }
 
     Destroy(other.gameObject);
   }
