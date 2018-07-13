@@ -30,12 +30,6 @@ public class Enemy : MonoBehaviour {
   void Update() {
     Transform target = GetTarget();
     if (target == null) return;
-    var diff = target.position - transform.position;
- 
-    foreach (var renderer in Renderers) {
-      renderer.flipX = diff.x > 0;
-    }
-
     transform.position = Vector3.MoveTowards(transform.position, target.position, MovementSpeed * Time.deltaTime);
   }
 

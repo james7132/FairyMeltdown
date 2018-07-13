@@ -24,8 +24,9 @@ GameObject:
   - component: {fileID: 58822911174887200}
   - component: {fileID: 114122932051918732}
   - component: {fileID: 50954530225720536}
+  - component: {fileID: 114724487839384146}
   m_Layer: 0
-  m_Name: BasicEnemy 2
+  m_Name: NewspaperFairy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -113,6 +114,19 @@ MonoBehaviour:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 5, y: 15, z: 5}
   MovementSpeed: 2
+--- !u!114 &114724487839384146
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1368886778905350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ac9ff75053c1d446bab2c55baa32833, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Renderers:
+  - {fileID: 212656474469888944}
 --- !u!212 &212656474469888944
 SpriteRenderer:
   m_ObjectHideFlags: 1

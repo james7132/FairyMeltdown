@@ -24,8 +24,10 @@ GameObject:
   - component: {fileID: 58822911174887200}
   - component: {fileID: 114122932051918732}
   - component: {fileID: 50954530225720536}
+  - component: {fileID: 95301754552274750}
+  - component: {fileID: 114473466091087950}
   m_Layer: 0
-  m_Name: BasicEnemy
+  m_Name: BasicFairy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -79,6 +81,24 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.1
+--- !u!95 &95301754552274750
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1368886778905350}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c56bd35f9d250ff41bad328775d5e626, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114122932051918732
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -93,6 +113,19 @@ MonoBehaviour:
   Target: 2
   MovementSpeed: 5
   DamageDealt: 1
+  Renderers:
+  - {fileID: 212656474469888944}
+--- !u!114 &114473466091087950
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1368886778905350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ac9ff75053c1d446bab2c55baa32833, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   Renderers:
   - {fileID: 212656474469888944}
 --- !u!114 &114493178165890118
