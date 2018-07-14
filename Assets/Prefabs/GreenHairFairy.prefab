@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 114122932051918732}
   - component: {fileID: 50954530225720536}
   - component: {fileID: 114850801579307272}
+  - component: {fileID: 114948820837450636}
   m_Layer: 0
   m_Name: GreenHairFairy
   m_TagString: Enemy
@@ -127,6 +128,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Renderers:
   - {fileID: 212656474469888944}
+  Inverse: 0
+--- !u!114 &114948820837450636
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1368886778905350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dec803c5e617e944b9e11ef2c59e468c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DeathEffects:
+  - {fileID: 139366, guid: b185c1a9cf067374586d095111b15bd1, type: 2}
 --- !u!212 &212656474469888944
 SpriteRenderer:
   m_ObjectHideFlags: 1

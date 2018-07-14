@@ -6,7 +6,6 @@ public class Reactor : MonoBehaviour {
 
   public float ReactorHealth = 100f;
   public float DefaultEnemyDamage = 5f;
-  public GameObject Explosion;
 
   /// <summary>
   /// Sent when another object enters a trigger collider attached to this
@@ -27,7 +26,6 @@ public class Reactor : MonoBehaviour {
       Debug.Break();
     }
 
-    Instantiate(Explosion, other.transform.position, Quaternion.identity);
     Destroy(other.gameObject);
   }
 

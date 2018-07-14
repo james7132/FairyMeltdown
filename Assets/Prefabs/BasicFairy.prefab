@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 50954530225720536}
   - component: {fileID: 95301754552274750}
   - component: {fileID: 114473466091087950}
+  - component: {fileID: 114866362624914244}
   m_Layer: 0
   m_Name: BasicFairy
   m_TagString: Enemy
@@ -128,6 +129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Renderers:
   - {fileID: 212656474469888944}
+  Inverse: 0
 --- !u!114 &114493178165890118
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -146,6 +148,19 @@ MonoBehaviour:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 5, y: 15, z: 5}
   MovementSpeed: 2
+--- !u!114 &114866362624914244
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1368886778905350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dec803c5e617e944b9e11ef2c59e468c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DeathEffects:
+  - {fileID: 139366, guid: b185c1a9cf067374586d095111b15bd1, type: 2}
 --- !u!212 &212656474469888944
 SpriteRenderer:
   m_ObjectHideFlags: 1
