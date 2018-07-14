@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
 
+  public Rigidbody2D Rigidbody;
   public Bounds PlayerBounds;
   public Bounds MovementBounds;
   public float MovementSpeed;
 
 	void Update () {
     var movement = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
-    transform.Translate(movement * MovementSpeed * Time.deltaTime);
+    Rigidbody.velocity = movement * MovementSpeed;
 	}
 
   /// <summary>

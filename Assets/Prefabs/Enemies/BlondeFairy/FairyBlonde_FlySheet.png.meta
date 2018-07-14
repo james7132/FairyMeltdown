@@ -1,16 +1,11 @@
 fileFormatVersion: 2
-guid: ec6c2d6f557bc9a43bbcf3375e2f880d
+guid: 45bfa5996c9c78b45ba9b264f489a447
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Wall_0
-    21300002: Wall_1
-    21300004: Wall_2
-    21300006: Wall_3
-    21300008: Wall_4
-    21300010: Wall_5
-    21300012: Wall_6
-    21300014: Wall_7
-    21300016: Wall_8
+    21300000: FairyBlonde_FlySheet_0
+    21300002: FairyBlonde_FlySheet_1
+    21300004: FairyBlonde_FlySheet_2
+    21300006: FairyBlonde_FlySheet_3
   externalObjects: {}
   serializedVersion: 5
   mipmaps:
@@ -52,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 75
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -91,52 +86,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Wall_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 961d11b01759af549971aaca8155480a
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wall_1
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dcd8c6979b94715438cf468820380f60
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wall_2
+      name: FairyBlonde_FlySheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
+        width: 33
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -145,58 +100,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ae0ca661c1ca2c84e8d0fd636e158b66
+      spriteID: ab172d8c28ba97441b88a652cd439abc
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wall_3
+      name: FairyBlonde_FlySheet_1
       rect:
         serializedVersion: 2
-        x: 32
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7494c8fa1d8e45441a9bc2886dcc8af3
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wall_4
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b5f2ab515f3a9b345ba2d6de3e433fb3
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wall_5
-      rect:
-        serializedVersion: 2
-        x: 32
+        x: 38
         y: 0
-        width: 32
+        width: 35
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -205,58 +120,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: decb629b2447b7d48a69cff33c5eb79d
+      spriteID: 839c2b2408bf65e438f73a7eea9a670a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wall_6
+      name: FairyBlonde_FlySheet_2
       rect:
         serializedVersion: 2
-        x: 64
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ed971d654b641534c971f161e548b583
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wall_7
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a3d27295a23a41c47beb02c6040290b1
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wall_8
-      rect:
-        serializedVersion: 2
-        x: 64
+        x: 76
         y: 0
-        width: 32
+        width: 35
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -265,7 +140,27 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4e06a3d043d4aaa48ac4806d9f9e0072
+      spriteID: 931a8cd19857c714589dea4fe9980e15
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FairyBlonde_FlySheet_3
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 0
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c070fcb6aea5e144d8d35a8e7c3e1861
       vertices: []
       indices: 
       edges: []
@@ -273,7 +168,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: ecee395291832b24a834d0761fd919a8
+    spriteID: 3ed8a243b7abb5940aa940b7d21073e3
     vertices: []
     indices: 
     edges: []
