@@ -8,18 +8,21 @@ public class PlayerAttack : MonoBehaviour {
   public float MinDelayProjectile;
   public float ShotSpeed = 5;
   public float BlastBulletCount = 8;
+  public float PanicDelay = 15f;
+  [System.NonSerialized] public float PanicTimer;
 
   bool firedSinceLastTimer;
   float timer;
+  float panicTimer;
   bool fireBlast;
 
 	// Update is called once per frame
 	void Update () {
-    FireCheck("Fire1", false);
-    FireCheck("Fire2", true);
     timer -= Time.deltaTime;
+    PanicTimer -= Time.deltaTime;
+    FireCheck("Fire1", false);
+    FireCheck("Fire2", true, PanicTimer < 0);
     if (timer > 0f || !firedSinceLastTimer) return;
-    Debug.Log(fireBlast);
     if (fireBlast) {
       FireBlast();
     } else {
@@ -27,7 +30,8 @@ public class PlayerAttack : MonoBehaviour {
     }
 	}
 
-  void FireCheck(string input, bool blast) {
+  void FireCheck(string input, bool blast, bool prereq = true) {
+    if (!prereq) return;
     var check = Input.GetButtonDown(input);
     firedSinceLastTimer |= check;
     if (check) {
@@ -41,6 +45,7 @@ public class PlayerAttack : MonoBehaviour {
       var direction = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle));
       Fire(ProjectilePrefab, direction);
     }
+    PanicTimer = PanicDelay;
   }
 
   void FireSingle() {

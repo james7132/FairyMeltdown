@@ -182,7 +182,8 @@ MonoBehaviour:
     type: 2}
   MinDelayProjectile: 0.5
   ShotSpeed: 25
-  BlastBulletCount: 8
+  BlastBulletCount: 16
+  PanicDelay: 15
 --- !u!114 &114438655080378782
 MonoBehaviour:
   m_ObjectHideFlags: 1

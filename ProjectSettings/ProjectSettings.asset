@@ -665,9 +665,9 @@ PlayerSettings:
     UNet: 1
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 3
-  cloudProjectId: 
-  projectName: Template_2D
-  organizationId: 
+  cloudProjectId: d8e15d6b-17e8-4d86-a972-e0b260f67042
+  projectName: Fairy MeltDown
+  organizationId: james7132
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
