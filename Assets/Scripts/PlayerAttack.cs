@@ -7,36 +7,54 @@ public class PlayerAttack : MonoBehaviour {
   public GameObject ProjectilePrefab;
   public float MinDelayProjectile;
   public float ShotSpeed = 5;
+  public float BlastBulletCount = 8;
 
   bool firedSinceLastTimer;
   float timer;
-
-  Vector2 oldPosition;
-  Vector2 direction;
-
-  /// <summary>
-  /// Awake is called when the script instance is being loaded.
-  /// </summary>
-  void Awake() {
-    oldPosition = transform.position;
-    direction = -Vector2.right;
-  }
+  bool fireBlast;
 
 	// Update is called once per frame
 	void Update () {
-    var diff = (Vector2)transform.position - oldPosition;
-    if (diff != Vector2.zero) {
-      direction = diff.normalized;
-    }
-    firedSinceLastTimer |= Input.GetButtonDown("Fire1");
+    FireCheck("Fire1", false);
+    FireCheck("Fire2", true);
     timer -= Time.deltaTime;
-    if (timer <= 0f && firedSinceLastTimer) {
-      firedSinceLastTimer = false;
-      timer = MinDelayProjectile;
-      var projectile = Instantiate(ProjectilePrefab, transform.position, Quaternion.identity);
-      projectile.GetComponent<Projectile>().Movement = ShotSpeed * direction;
+    if (timer > 0f || !firedSinceLastTimer) return;
+    Debug.Log(fireBlast);
+    if (fireBlast) {
+      FireBlast();
+    } else {
+      FireSingle();
     }
-    oldPosition = transform.position;
 	}
+
+  void FireCheck(string input, bool blast) {
+    var check = Input.GetButtonDown(input);
+    firedSinceLastTimer |= check;
+    if (check) {
+      fireBlast = blast;
+    }
+  }
+
+  void FireBlast() {
+    for (var i = 0; i < BlastBulletCount; i++) {
+      var angle = i * Mathf.PI * 2 / BlastBulletCount;
+      var direction = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle));
+      Fire(ProjectilePrefab, direction);
+    }
+  }
+
+  void FireSingle() {
+    var camera = Camera.main;
+    var mousePosition = (Vector2)camera.ScreenToWorldPoint(Input.mousePosition);
+    var direction = (mousePosition - (Vector2)transform.position).normalized;
+    Fire(ProjectilePrefab, direction);
+  }
+
+  void Fire(GameObject prefab, Vector2 direction) {
+    var projectile = Instantiate(prefab, transform.position, Quaternion.identity);
+    projectile.GetComponent<Projectile>().Movement = ShotSpeed * direction;
+    firedSinceLastTimer = false;
+    timer = MinDelayProjectile;
+  }
 
 }

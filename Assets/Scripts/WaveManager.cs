@@ -2,10 +2,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using Object = UnityEngine.Object;
 using Random = UnityEngine.Random;
 
+[Serializable]
+public class IntEvent : UnityEvent<int> {}
+
 public class WaveManager : MonoBehaviour {
+
+  public IntEvent NewWave;
 
   [Serializable]
   public struct WaveProbablity {
@@ -85,6 +91,7 @@ public class WaveManager : MonoBehaviour {
   IEnumerator RunWaves(float waveCountScaleFactor) {
     int waveCount = 1;
     while (true) {
+      NewWave.Invoke(waveCount);
       CurrentWave = GenerateNewWave(Mathf.FloorToInt(waveCount * waveCountScaleFactor));
       yield return RunWave(CurrentWave);
       Debug.Log($"Wave {waveCount} finished.");

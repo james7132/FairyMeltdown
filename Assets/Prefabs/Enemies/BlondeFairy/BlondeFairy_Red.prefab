@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 114850801579307272}
   - component: {fileID: 95068960098777210}
   m_Layer: 0
-  m_Name: BlondeFairy 1
+  m_Name: BlondeFairy_Red
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -109,9 +109,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f53b228f0149114199ed6c2384ab88b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Target: 2
+  Target: 1
   MovementSpeed: 5
-  DamageDealt: 1
+  DamageDealt: 15
   Renderers:
   - {fileID: 212656474469888944}
   DeathEffects:
@@ -166,7 +166,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300004, guid: 3f29d76583d24564a9db45691b0b57a4, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

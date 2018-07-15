@@ -109,7 +109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f53b228f0149114199ed6c2384ab88b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Target: 2
+  Target: 1
   MovementSpeed: 15
   DamageDealt: 1
   Renderers:

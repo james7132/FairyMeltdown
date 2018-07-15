@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerMovement : MonoBehaviour {
 
+  public UnityEvent OnDeath;
+
   public Rigidbody2D Rigidbody;
-  public Bounds PlayerBounds;
-  public Bounds MovementBounds;
   public float MovementSpeed;
 
 	void Update () {
@@ -15,13 +16,15 @@ public class PlayerMovement : MonoBehaviour {
 	}
 
   /// <summary>
-  /// Callback to draw gizmos that are pickable and always drawn.
+  /// Sent when an incoming collider makes contact with this object's
+  /// collider (2D physics only).
   /// </summary>
-  void OnDrawGizmos() {
-    Gizmos.DrawWireCube(MovementBounds.center, MovementBounds.extents);
-    var matrix = Gizmos.matrix;
-    Gizmos.matrix = transform.localToWorldMatrix;
-    Gizmos.DrawWireCube(PlayerBounds.center, PlayerBounds.extents);
-    Gizmos.matrix = matrix;
+  /// <param name="other">The Collision2D data associated with this collision.</param>
+  void OnCollisionEnter2D(Collision2D other) {
+    if (!other.gameObject.CompareTag("Enemy")) return;
+    if (other.gameObject.GetComponent<Enemy>() != null) {
+      OnDeath.Invoke();
+    }
   }
+
 }

@@ -23,10 +23,10 @@ GameObject:
   - component: {fileID: 58822911174887200}
   - component: {fileID: 114122932051918732}
   - component: {fileID: 50954530225720536}
-  - component: {fileID: 95301754552274750}
-  - component: {fileID: 114473466091087950}
+  - component: {fileID: 114724487839384146}
+  - component: {fileID: 95775102934021816}
   m_Layer: 0
-  m_Name: BasicFairy_Red
+  m_Name: Cirno
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -80,7 +80,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.1
---- !u!95 &95301754552274750
+--- !u!95 &95775102934021816
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
@@ -89,7 +89,7 @@ Animator:
   m_GameObject: {fileID: 1368886778905350}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c56bd35f9d250ff41bad328775d5e626, type: 2}
+  m_Controller: {fileID: 22100000, guid: b77564b55881a484a88712e7770cccd3, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -111,12 +111,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Target: 2
   MovementSpeed: 5
-  DamageDealt: 15
+  DamageDealt: -1
   Renderers:
   - {fileID: 212656474469888944}
   DeathEffects:
-  - {fileID: 1303051667345306, guid: 9a94e6fe5fe72ff489dadcd0697f3e90, type: 2}
---- !u!114 &114473466091087950
+  - {fileID: 1303051667345306, guid: 62f6dee2d73a04d48850e806e9ccde2f, type: 2}
+--- !u!114 &114724487839384146
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -165,8 +165,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1138a4b2cd65ccc4ebe9e9e37efe3203, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: cc3f83332f53a034fb34ee1fdafa0349, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
