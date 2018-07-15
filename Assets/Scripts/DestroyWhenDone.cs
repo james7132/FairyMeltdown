@@ -5,6 +5,7 @@ using UnityEngine;
 public class DestroyWhenDone : MonoBehaviour {
 
   public Animator Animator;
+  public Animation Animation;
   public AudioSource AudioSource;
   public ParticleSystem ParticleSystem;
 	
@@ -19,6 +20,9 @@ public class DestroyWhenDone : MonoBehaviour {
     }
     if (ParticleSystem != null) {
       keepGameObject |= ParticleSystem.isPlaying;
+    }
+    if (Animation != null) {
+      keepGameObject |= Animation.isPlaying;
     }
     if (!keepGameObject) {
       Destroy(gameObject);

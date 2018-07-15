@@ -96,7 +96,7 @@ MonoBehaviour:
   Renderers:
   - {fileID: 212656474469888944}
   DeathEffects:
-  - {fileID: 1303051667345306, guid: 9a94e6fe5fe72ff489dadcd0697f3e90, type: 2}
+  - {fileID: 1131498326623276, guid: 4a62b537e423eab4e9442765277fa014, type: 2}
 --- !u!114 &114774219999609340
 MonoBehaviour:
   m_ObjectHideFlags: 1
