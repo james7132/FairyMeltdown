@@ -1,8 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Reactor : MonoBehaviour {
+
+  public UnityEvent ReactorDestroyed;
 
   public float ReactorHealth = 100f;
   public float DefaultEnemyDamage = 5f;
@@ -32,6 +35,7 @@ public class Reactor : MonoBehaviour {
     }
     ReactorCurrentHealth -= damage;
     if (ReactorCurrentHealth <= 0) {
+      ReactorDestroyed.Invoke();
       Debug.Log("Game over!");
       Debug.Break();
     }
