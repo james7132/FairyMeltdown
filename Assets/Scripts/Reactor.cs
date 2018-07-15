@@ -32,15 +32,15 @@ public class Reactor : MonoBehaviour {
     var enemy = other.GetComponentInChildren<Enemy>();
     if (enemy != null) {
       damage = enemy.DamageDealt;
+      enemy.Kill();
+    } else {
+      Destroy(other.gameObject);
     }
     ReactorCurrentHealth -= damage;
     if (ReactorCurrentHealth <= 0) {
       ReactorDestroyed.Invoke();
-      Debug.Log("Game over!");
-      Debug.Break();
     }
 
-    Destroy(other.gameObject);
   }
 
 }

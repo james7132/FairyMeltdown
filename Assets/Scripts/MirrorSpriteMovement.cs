@@ -11,17 +11,17 @@ public class MirrorSpriteMovement : MonoBehaviour {
   Vector3 oldPosition;
 
   /// <summary>
-  /// Update is called every frame, if the MonoBehaviour is enabled.
+  /// Start is called on the frame when a script is enabled just before
+  /// any of the Update methods is called the first time.
   /// </summary>
-  void Update() {
+  void Start() {
     oldPosition = transform.position;
   }
 
   /// <summary>
-  /// LateUpdate is called every frame, if the Behaviour is enabled.
-  /// It is called after all Update functions have been called.
+  /// Update is called every frame, if the MonoBehaviour is enabled.
   /// </summary>
-  void LateUpdate() {
+  void Update() {
     var diff = transform.position - oldPosition;
     if (diff.x > 0) {
       facing = Inverse ? true : false;
@@ -31,6 +31,7 @@ public class MirrorSpriteMovement : MonoBehaviour {
     foreach (var renderer in Renderers) {
       renderer.flipX = facing;
     }
+    oldPosition = transform.position;
   }
 
 }

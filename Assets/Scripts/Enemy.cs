@@ -12,6 +12,7 @@ public class Enemy : MonoBehaviour {
   public float MovementSpeed = 5f;
   public float DamageDealt = 5f;
   public SpriteRenderer[] Renderers;
+  public GameObject[] DeathEffects;
 
   Transform Player;
   Transform Reactor;
@@ -31,6 +32,14 @@ public class Enemy : MonoBehaviour {
     Transform target = GetTarget();
     if (target == null) return;
     transform.position = Vector3.MoveTowards(transform.position, target.position, MovementSpeed * Time.deltaTime);
+  }
+
+  public void Kill() {
+    foreach (var effect in DeathEffects) {
+      if (effect == null) continue;
+      Instantiate(effect, transform.position, effect.transform.rotation);
+    }
+    Destroy(gameObject);
   }
 
   Transform GetTarget() {

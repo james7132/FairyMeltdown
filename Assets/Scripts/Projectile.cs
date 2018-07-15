@@ -20,7 +20,12 @@ public class Projectile : MonoBehaviour {
   /// <param name="other">The other Collider2D involved in this collision.</param>
   void OnTriggerEnter2D(Collider2D other) {
     if (!other.CompareTag("Enemy")) return;
-    Destroy(other.gameObject);
+    var enemy = other.GetComponent<Enemy>();
+    if (enemy != null) {
+      enemy.Kill();
+    } else {
+      Destroy(other.gameObject);
+    }
   }
 
 }

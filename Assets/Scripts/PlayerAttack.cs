@@ -6,7 +6,6 @@ public class PlayerAttack : MonoBehaviour {
 
   public GameObject ProjectilePrefab;
   public float MinDelayProjectile;
-  public KeyCode FireKey = KeyCode.E;
   public float ShotSpeed = 5;
 
   bool firedSinceLastTimer;
@@ -29,7 +28,7 @@ public class PlayerAttack : MonoBehaviour {
     if (diff != Vector2.zero) {
       direction = diff.normalized;
     }
-    firedSinceLastTimer |= Input.GetKeyDown(FireKey);
+    firedSinceLastTimer |= Input.GetButtonDown("Fire1");
     timer -= Time.deltaTime;
     if (timer <= 0f && firedSinceLastTimer) {
       firedSinceLastTimer = false;

@@ -6,6 +6,7 @@ public class DestroyWhenDone : MonoBehaviour {
 
   public Animator Animator;
   public AudioSource AudioSource;
+  public ParticleSystem ParticleSystem;
 	
 	// Update is called once per frame
 	void Update () {
@@ -15,6 +16,9 @@ public class DestroyWhenDone : MonoBehaviour {
     }
     if (Animator != null)  {
       keepGameObject |= Animator.GetCurrentAnimatorStateInfo(0).normalizedTime <= 1f;
+    }
+    if (ParticleSystem != null) {
+      keepGameObject |= ParticleSystem.isPlaying;
     }
     if (!keepGameObject) {
       Destroy(gameObject);
